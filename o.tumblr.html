@@ -312,6 +312,16 @@
         margin-left: 1.5em;
         text-indent: -1.5em;
       }
+      .quote-post .cite:before {
+        content: '\002014\002002';
+      }
+      .quote-post .cite p {
+        text-indent: 0;
+      }
+      .quote-post .cite p:first-child {
+        display: inline;
+        text-indent: -1.5em;
+      }
 
       .chat-post li {
         list-style: none;
@@ -527,7 +537,7 @@
       <blockquote class="quote">{Quote}</blockquote>
 
       {block:Source}
-      <p class="cite">&mdash;&#8194;{Source}</p>
+      <div class="cite">{Source}</div>
       {/block:Source}
     </div>
     {/block:Quote}
